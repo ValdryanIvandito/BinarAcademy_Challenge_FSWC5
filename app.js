@@ -1,15 +1,11 @@
 const fs = require('fs');
 const express = require('express');
-//var expressLayouts = require('express-ejs-layouts');
 const { rockP1, paperP1, scissorsP1, gameRestart } = require('./utils/script.js')
 const app = express();
 const port = 3000;
 
 // Using ejs
 app.set('view engine', 'ejs');
-
-// Third party middleware
-//app.use(expressLayouts);
 
 // Build in middleware
 app.use(express.urlencoded({ extended: true }));
